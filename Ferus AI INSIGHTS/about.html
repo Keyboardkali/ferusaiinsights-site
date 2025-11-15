@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FerusAI Insights – About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="ferusai-logo.png" alt="FerusAI Insights logo" />
+      <div class="brand-name">Applied AI research</div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- Intro -->
+    <section>
+      <div class="section-header">
+        <h1>About FerusAI Insights</h1>
+      </div>
+
+      <div class="about-intro">
+        <p>
+          FerusAI Insights is a market intelligence and research firm dedicated to applied AI. We focus on how AI products move from idea to real adoption inside organisations, and what that means for builders and investors.
+        </p>
+        <p>
+          Our work blends structured surveys, qualitative interviews and advanced data collection models that continuously organise open digital signals around tools, workflows and topics. This allows us to connect what decision-makers say, what they actually do and how markets are shifting.
+        </p>
+        <p>
+          The team’s background spans mathematics, finance, strategy and product. We care about sharp, practical answers that are easy to use in roadmaps, go-to-market plans and investment memos.
+        </p>
+      </div>
+    </section>
+
+    <!-- How we think about AI markets -->
+    <section>
+      <div class="section-header">
+        <h2>How we think about AI markets</h2>
+        <p>
+          AI is not a single market. It is a layer being added to existing workflows, products and companies. We treat it that way in our research.
+        </p>
+      </div>
+
+      <div class="three-col-grid">
+        <div class="card-soft">
+          <div class="card-label">Behaviour first</div>
+          <p>
+            Stated interest in AI is high. Real adoption is uneven. We focus on usage, rollout, renewal and churn, then layer attitudes on top, not the other way around.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Context matters</div>
+          <p>
+            A product’s prospects depend on the category it sits in, the alternatives buyers compare it to and the internal politics around risk and budget. Our work reflects that full context.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Decisions, not decks</div>
+          <p>
+            Reports are designed around the decisions clients need to take: which market to prioritise, how to position a product, whether to back a thesis or not.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we run research -->
+    <section>
+      <div class="section-header">
+        <h2>How we run research</h2>
+        <p>
+          Different questions need different methods. We combine a small set of tools in a consistent way so clients can compare results over time.
+        </p>
+      </div>
+
+      <div class="three-col-grid">
+        <div class="card-soft">
+          <div class="card-label">Decision-maker surveys</div>
+          <p>
+            Structured questionnaires targeted at people who influence or sign off AI-related spend, designed to track behaviour and sentiment over time.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Interviews &amp; deep dives</div>
+          <p>
+            Conversations with buyers, users and operators to understand how decisions are made in practice, and where internal friction comes from.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Data collection models</div>
+          <p>
+            Models that continuously collect and structure open digital signals across communities, product updates and documentation, giving a live read on topics, sentiment and momentum.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© 2025 FerusAI Insights. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="mailto:contact@ferusaiinsights.com">Email</a>
+      <a href="#" aria-label="FerusAI Insights on LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
+  navToggle?.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FerusAI Insights – Insights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="ferusai-logo.png" alt="FerusAI Insights logo" />
+      <div class="brand-name">Applied AI research</div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section>
+      <div class="section-header">
+        <h1>Sample insights</h1>
+        <p>
+          Below are examples of the types of signals that come out of our trackers and deep-dive
+          reports. Client work includes full data tables, methodology notes and segment cuts tailored
+          to your needs.
+        </p>
+      </div>
+
+      <div class="three-col-grid">
+        <div class="card-soft">
+          <div class="card-label">Behaviour signal</div>
+          <h3>Specialised copilots beat generic chatbots</h3>
+          <p>
+            In developer and finance workflows, narrow AI copilots designed around a specific stack
+            or process consistently outperform generic chatbots on retention. Teams value “gets my
+            workflow” more than “largest possible model”.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Pricing reality</div>
+          <h3>Experimentation budgets are tight</h3>
+          <p>
+            Many teams pay for AI tools from experimentation or productivity budgets. Tools positioned
+            as strategic infrastructure win higher ARPU and longer commitments than tools framed as
+            “nice-to-have automation”.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Adoption dynamic</div>
+          <h3>Non-technical teams are the next demand wave</h3>
+          <p>
+            Legal, operations and risk functions show growing interest in AI but lack tailored
+            products. Vendors that solve for auditability, approvals and traceability see faster
+            expansion once the first team adopts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>How insights are produced</h2>
+        <p>
+          Each signal is the result of structured research, not a one-off anecdote. We triangulate
+          behaviour, sentiment and market structure before calling anything a trend.
+        </p>
+      </div>
+
+      <div class="three-col-grid">
+        <div class="card-soft">
+          <div class="card-label">Behavioural lenses</div>
+          <p>
+            We analyse how users discover tools, trial them, roll them out and eventually champion or
+            abandon them. That includes internal politics, budget friction and risk concerns that
+            rarely show up in public narratives.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Advanced data collection models</div>
+          <p>
+            We combine decision-maker surveys and interviews with models that continuously collect and
+            structure open digital signals across communities, product updates and documentation.
+            These models let us track sentiment, topics and momentum around tools and workflows over
+            time instead of relying on single spikes of attention.
+          </p>
+        </div>
+
+        <div class="card-soft">
+          <div class="card-label">Market mapping</div>
+          <p>
+            We cluster products into clear categories and track launches, pricing and positioning
+            shifts. This helps you see where categories are converging, fragmenting or leaving
+            whitespace for new entrants or acquisitions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>From signals to action</h2>
+        <p>
+          In client work, these signals are packaged to support specific moves: which market to
+          prioritise, how to position a raise, whether to back a thesis, or how to adjust a roadmap.
+        </p>
+      </div>
+      <p class="cta-inline">
+        If you would like to see an anonymised example pack or discuss a specific applied AI segment,
+        you can start with a short call. <a href="contact.html">Contact us.</a>
+      </p>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© 2025 FerusAI Insights. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="mailto:contact@ferusaiinsights.com">Email</a>
+      <a href="#" aria-label="FerusAI Insights on LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
+  navToggle?.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+</script>
+</body>
+</html>
