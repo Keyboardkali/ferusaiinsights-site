@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FerusAI Insights – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="ferusai-logo.png" alt="FerusAI Insights logo" />
+      <div class="brand-name">Applied AI research</div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section>
+      <div class="section-header">
+        <h1>Contact</h1>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <p>
+            Share what you are building or evaluating, and the decisions you are working through. We
+            will come back with a view on whether our work is a good fit and what a sensible starting
+            point could look like.
+          </p>
+          <p>
+            Typical clients include AI product companies, investors and strategy teams inside larger
+            organisations who need a clear, grounded view on applied AI markets.
+          </p>
+
+          <p class="contact-email">
+            Email: <span>contact@ferusaiinsights.com</span>
+          </p>
+
+          <p class="contact-copy">
+            Engagements range from focused reports to ongoing programmes. We are comfortable starting
+            lean and expanding scope if the fit is right.
+          </p>
+
+          <div class="pill-row">
+            <div class="pill">Market trackers</div>
+            <div class="pill">Category studies</div>
+            <div class="pill">Buyer research</div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <!-- FORM -->
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Work Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Fund</label>
+              <input type="text" id="company" name="company" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">What are you exploring?</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                placeholder="Share your product, thesis or research question in a few lines."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">Submit inquiry</button>
+            <p class="form-note">
+              When you submit, your email app will open with the details pre-filled to send to us.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© 2025 FerusAI Insights. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="mailto:contact@ferusaiinsights.com">Email</a>
+      <a href="#" aria-label="FerusAI Insights on LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
+  navToggle?.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Contact form -> mailto handler
+  const contactForm = document.getElementById("contactForm");
+  contactForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const company = document.getElementById("company").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email) {
+      alert("Please enter your name and work email.");
+      return;
+    }
+
+    const subject = `New inquiry from ${name} – FerusAI Insights`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      company ? `Company / Fund: ${company}` : "",
+      "",
+      "What they are exploring:",
+      message || "(no additional details provided)"
+    ].filter(Boolean);
+
+    const mailtoLink =
+      "mailto:contact@ferusaiinsights.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+    window.location.href = mailtoLink;
+  });
+</script>
+</body>
+</html>
